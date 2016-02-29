@@ -2,7 +2,7 @@
 
 import express from 'express'
 
-import { PORT } from '../config'
+import { PORT, IS_A_TEST } from '../config'
 
 const app = express()
 app.set('port', PORT || 3000)
@@ -16,4 +16,5 @@ if (!IS_A_TEST) {
     console.log(`(>'')>*<(''<) ~ app listening on http://localhost:${port}`)
   })
 }
-export default app
+
+module.exports = app

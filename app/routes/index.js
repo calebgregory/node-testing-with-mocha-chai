@@ -1,12 +1,14 @@
 'use strict'
 
-import { join } from 'path'
+const { join } = require('path')
 
-import { Router } from 'express'
+const { Router } = require('express')
+
+const ctrl = require('./ctrl')
 
 const router = Router()
 
-router.get('/a')
-router.get('/b')
+router.get('/a', ctrl.a)
+router.get('/b', ctrl.b)
 
-export default router
+module.exports = router
