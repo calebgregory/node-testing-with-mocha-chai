@@ -8,7 +8,11 @@ const app = require('../../app')
 
 const request = supertest.agent(app.listen())
 
+const game = require('../../lib/game')
+
 module.exports = {
   expect: chai.expect,
-  request
+  spy: chai.spy,
+  request,
+  game
 }
