@@ -13,15 +13,15 @@ module.exports = (pg) => (connectionString) => (init) => new Promise((resolve, r
 
   let query = client.query(
     `
-    INSERT INTO Players (
-      name,
-      energy_level
+    INSERT INTO Games (
+      player_one,
+      player_two
     ) VALUES (
       $1,
       $2
     ) RETURNING id;
     `,
-    [ init.name, init.energyLevel ],
+    [ init.playerOne._id, init.playerTwo._id ],
     callback
   )
 })

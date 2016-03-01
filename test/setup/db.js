@@ -10,8 +10,8 @@ const SETUP_DB = `
   );
   CREATE TABLE IF NOT EXISTS Games (
     id SERIAL PRIMARY KEY,
-    player_one INT REFERENCES Players(id),
-    player_two INT REFERENCES Players(id)
+    player_one INT REFERENCES Players(id) ON DELETE CASCADE,
+    player_two INT REFERENCES Players(id) ON DELETE CASCADE
   );
 `
 

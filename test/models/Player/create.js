@@ -20,5 +20,18 @@ module.exports = {
         }
       )
       .catch( done )
+  },
+
+  returnsId: (done) => {
+    const name = TEST_NAME
+    const energyLevel = 10
+    models.Player.create({ name, energyLevel })
+      .then(
+        (id) => {
+          expect(id).to.be.a('number')
+          done()
+        }
+      )
+      .catch( done )
   }
 }
