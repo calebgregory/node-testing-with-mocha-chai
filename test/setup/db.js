@@ -15,11 +15,23 @@ const SETUP_DB = `
   );
 `
 
-module.exports = (connectionString) => {
-  let client = new pg.Client(connectionString)
-  client.connect()
+module.exports = {
+  setup: (connectionString) => {
+    let client = new pg.Client(connectionString)
+    client.connect()
 
-  let query = client.query(SETUP_DB)
-  query.on('error', (error) => console.error(error))
-  query.on('end', () => client.end() )
+    let query = client.query(SETUP_DB)
+    query.on('error', (error) => console.error(error))
+    query.on('end', () => client.end() )
+  },
+
+  query: (connectionString) => (queryArr) => new Promise((resolve, reject) => {
+    let client = new pg.Client(connectionString)
+    client.connect()
+
+    let query = client.query(queryArr[0], queryArr[1] || [], (error, result) => {
+      if (error) return reject(error)
+      return resolve(result)
+    })
+  })
 }
