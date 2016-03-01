@@ -1,14 +1,13 @@
 'use strict'
 
-import express from 'express'
+const express = require('express')
 
-import { PORT, IS_A_TEST } from '../config'
+const { PORT, IS_A_TEST } = require('../config')
 
 const app = express()
 app.set('port', PORT || 3000)
 
-import routes from './routes'
-app.use(routes)
+app.use(require('./routes'))
 
 if (!IS_A_TEST) {
   const server = app.listen(app.get('port'), () => {
