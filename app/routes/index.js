@@ -8,7 +8,7 @@ const ctrl = require('./ctrl')
 
 const router = Router()
 
-router.get('/a', ctrl.a)
-router.get('/b', ctrl.b)
+router.post('/attack', ctrl.attack)
+router.get('/game', ctrl.b)
 
 module.exports = router

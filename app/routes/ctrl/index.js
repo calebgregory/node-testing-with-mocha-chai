@@ -1,6 +1,6 @@
 'use strict'
 
 module.exports = {
-  a: require('./src/a'),
+  attack: require('./src/attack'),
   b: require('./src/b')
 }
