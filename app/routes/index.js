@@ -9,6 +9,6 @@ const ctrl = require('./ctrl')
 const router = Router()
 
 router.post('/attack', ctrl.attack)
-router.get('/game', ctrl.b)
+router.post('/newgame', ctrl.newGame)
 
 module.exports = router

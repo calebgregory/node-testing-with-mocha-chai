@@ -2,5 +2,5 @@
 
 module.exports = {
   attack: require('./src/attack'),
-  b: require('./src/b')
+  newGame: require('./src/new_game')
 }
