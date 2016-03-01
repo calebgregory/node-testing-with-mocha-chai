@@ -8,7 +8,10 @@ const app = require('../../app')
 
 const request = supertest.agent(app.listen())
 
+const { DATABASE_URL } = require('../../config')
+
 const game = require('../../lib/game')
+require('./db')(DATABASE_URL)
 
 module.exports = {
   expect: chai.expect,
