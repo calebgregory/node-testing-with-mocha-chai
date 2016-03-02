@@ -1,0 +1,37 @@
+* development without testing is
+  * often a scattered process.
+    * on any given day, i am
+      * chatting with my budz on Slack,
+      * listening to music,
+      * eating lunch,
+      * but also, like, living my life.
+      * all these ^ can distract me from mah code
+    * it would be helpful if i had some way of organizing things i need to do
+      * so i could leave and return to my work without a huge rampup time
+  * a totally manual process.
+    * my code has to work. my job is to write code that works.
+      * ...so,
+        * i need to check that every line i write works, and
+        * for every change to my code i make, i need to verify that change not break something else
+          * this means manually testing every part of my app,
+          * which is tedious and time consuming.
+      * plus,
+        * i have a short attention span,
+        * so by the time i get feedback, i've already forgotten what i'm trying to do
+* testing helps me because it
+  * automates my development process.
+    * i can get immediate feedback about whether or not what i just did worked
+    * in < 1 second, i can ensure that what i just did did not break what i did 2 months ago
+      * as apps get larger, this becomes fairly essential for managing anxiety
+  * encourages developer to think at a high level before acting.
+    * the process of writing tests involves making a list of requirements, or "goals", that i must meet.
+      * this helps me
+        * not forget what i'm doing, and
+        * not spend time on things that are less important.
+  * provides documentation to future developers (including me).
+    * specifications give descriptions of behavior in plain English.
+    * this enables others (including one's future-self) to collaborate with greater ease, aiding in productivity.
+* what is testing not?
+  * a foolproof method for writing good code
+    * testing is a tool
+      * and like all tools, how you use it matters
